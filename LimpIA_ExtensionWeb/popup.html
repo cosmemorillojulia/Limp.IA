@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Limp.IA</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <div class="fondo">
+
+      <div class="header">
+        <img id="extension-logo" src="icons/logoLimpIA.png" alt="Limp.IA" class="logo_popup">
+        <h1 id="title" class="title">Limp.IA</h1>
+      </div>
+
+      <div id="info" class="info">
+        <p>Analyzed images: <span class="contadores" id="analyzed-count">0</span></p>
+        <p>Blurred images: <span class="contadores" id="blurred-count">0</span></p>
+        <p>Protected images: <span class="contadores" id="protected-count">0</span></p>
+        <div class="checkbox-container">
+          <input type="checkbox" id="show-percentage">
+          <label for="show-percentage">Show percentages</label>
+        </div>
+      </div>
+
+      <div class="on_off_button">
+        <span id="toggle-text" class="status-text">ON</span>
+        <label class="switch">
+          <input type="checkbox" id="toggle-extension" checked>
+          <span class="slider"></span>
+        </label>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+{
+  "manifest_version": 2,
+  "name": "Limp.IA",
+  "version": "2.0",
+  "description": "Difumina imágenes de contenido sensible y mantén tu mirada limpia.",
+  "permissions": ["activeTab", "storage", "scripting"],
+  "icons": {
+    "16": "icons/logoLimpIA32.png",
+    "32": "icons/logoLimpIA32.png",
+    "48": "icons/logoLimpIA.png",
+    "128": "icons/logoLimpIA.png"
+  },
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/logoLimpIA32.png",
+      "32": "icons/logoLimpIA32.png"
+    },
+    "default_title": "Limp.IA"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["libs/tf.min.js", "content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    "model/*",
+    "libs/*",
+    "icons/*"
+  ]
+}
